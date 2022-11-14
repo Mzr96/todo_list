@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="content">
+      <header class="header">
+        <button class="menu-btn">
+          <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
+            />
+          </svg>
+        </button>
+        <h1 class="site-name">To Dos</h1>
+      </header>
+      <nav class="side-nav">
+        <ul class="nav-list">
+          <li>
+            <a class="nav-btn inbox" data-id="11" href="#">
+              <span
+                ><svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M16,10H14V7H10V10H8L12,14M19,15H15A3,3 0 0,1 12,18A3,3 0 0,1 9,15H5V5H19M19,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z"
+                  />
+                </svg>
+              </span>
+              <span>Inbox</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-btn today" data-id="22" href="#">
+              <span
+                ><svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M7,10H12V15H7M19,19H5V8H19M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z"
+                  /></svg
+              ></span>
+              <span>Today</span>
+            </a>
+          </li>
+          <li>
+            <a class="nav-btn week" data-id="77" href="#"
+              ><span
+                ><svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                  <path
+                    fill="currentColor"
+                    d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z"
+                  /></svg
+              ></span>
+              <span>Week</span></a
+            >
+          </li>
+        </ul>
+        <!-- <button class="add-project">
+          <div>project</div>
+          <div>+</div>
+        </button> -->
+        <div class="project">
+          <a class="add-project" href="#"
+            ><span>Project</span> <span>+</span></a
+          >
+          <ul class="projects-list">
+            <li class="form-project-container">
+              <form class="form-project hidden">
+                <!-- <label for="project-name">Name </label> -->
+                <input
+                  placeholder="Project Name"
+                  type="text"
+                  name="project-name"
+                  id="project-name"
+                />
+              </form>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <main class="main">
+        <h2 class="project-name-header"></h2>
+        <ul class="task-list">
+          <li>
+            <form class="form-task hidden" action="#">
+              <div class="form-task-inputs">
+                <input
+                  placeholder="e.g, Learn coding for 2h a day"
+                  type="text"
+                  name="title"
+                  id="title"
+                />
+                <textarea
+                  placeholder="Description"
+                  name="desc"
+                  id="desc"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+
+                <div class="priority-due-date-container">
+                  <select name="priority" id="priority">
+                    <option class="p-1" value="p-1">High priority</option>
+                    <option class="p-2" value="p-2">Medium priority</option>
+                    <option class="p-3" value="p-3">Low priority</option>
+                    <option selected class="p-4" value="p-4">
+                      No priority
+                    </option>
+                  </select>
+
+                  <input type="date" name="due-date" id="due-date" />
+                </div>
+              </div>
+              <div class="form-task-btn">
+                <button type="button" class="btn main-btn cancel-submit">
+                  Cancel
+                </button>
+                <button class="btn main-btn task-submit">Add task</button>
+              </div>
+            </form>
+          </li>
+
+          <li>
+            <button type="button" class="btn add-task">+ New task</button>
+          </li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>
